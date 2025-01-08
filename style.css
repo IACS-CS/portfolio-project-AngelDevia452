@@ -24,7 +24,7 @@ body {
   display: grid;
   place-content: center;
   /* Custom text and stuff */
-  background: #0033a0;
+  background: #18a000;
   color: white;
   font-family: Futura;
   font-weight: bold;
@@ -42,7 +42,7 @@ body {
   transition: background 0.5s;
 }
 .hero.active {
-  background: #c6093b;
+  background: #09c667;
 }
 
 main {
