@@ -24,7 +24,7 @@ body {
   display: grid;
   place-content: center;
   /* Custom text and stuff */
-  background: #18a000;
+  background: #a05b00;
   color: white;
   font-family: Futura;
   font-weight: bold;
@@ -42,13 +42,26 @@ body {
   transition: background 0.5s;
 }
 .hero.active {
-  background: #09c667;
+  background: #4209c6;
+}
+#about-me{
+  box-sizing: border-box;
+  /* Full screen hero section */
+  width: 100%;
+  height: 100dvh;
+  /* Center the content vertically and horizontally */
+  display: grid;
+  place-content: center;
+  background: #0d8b63;
+}
+section > * {
+  width: 600px;
+  margin-line: auto;
 }
 
 main {
   /* Make sure our content can scroll the hero away */
-  min-height: 100dvh;
-  max-width: 35em; /* choose a width for text */
+  min-height: 100dvh; /* choose a width for text */
   line-height: 1.8; /* choose a line spacing */
   font-size: 18px; /* choose a font size */
   margin: 0 auto; /* center the content */
@@ -102,4 +115,68 @@ title-bar {
   max-width: 100%;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+/* Contenedor principal */
+.card-container {
+  display: flex;
+  flex-direction: column;  /* Distribuir las filas verticalmente */
+  align-items: center;     /* Centrar las filas en el contenedor */
+  gap: 20px;               /* Espacio entre las filas */
+  margin-top: 50px;         /* Espacio desde la parte superior */
+}
+
+/* Fila de cartas (row) */
+.card-row {
+  display: flex;
+  justify-content: center; /* Centrar las cartas dentro de cada fila */
+  gap: 20px;               /* Espacio entre las cartas dentro de la fila */
+}
+
+/* Cartas individuales */
+.card {
+  background-color: #f52727;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo de las imágenes dentro de las cartas */
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilo de los textos */
+.card h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0 15px 15px;
+}
+
+/* Efecto al pasar el mouse sobre la carta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Especificar cómo se distribuyen las filas */
+.row-1 {
+  justify-content: center;  /* Una sola carta en el primer nivel */
+}
+
+.row-2 {
+  justify-content: space-between; /* Dos cartas en el segundo nivel */
+  max-width: 440px; /* Para asegurar que no se extiendan más allá de un ancho razonable */
+}
+
+.row-3 {
+  justify-content: space-between; /* Tres cartas en el tercer nivel */
+  max-width: 660px; /* Asegurar que las tres cartas no se sobrepongan */
 }
