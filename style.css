@@ -78,6 +78,7 @@ title-bar {
 .title-bar .buttons {
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .title-bar .buttons span {
